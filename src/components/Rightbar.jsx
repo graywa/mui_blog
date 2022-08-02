@@ -1,11 +1,10 @@
-import { Box } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
 
 const Rightbar = () => {
   return (
     <Box
       flex={1}
-      bgcolor='lightpink'
       p={2}
       sx={{
         display: {
@@ -14,7 +13,12 @@ const Rightbar = () => {
         },
       }}
     >
-      Rightbar
+      <Box position='fixed'>
+        <Typography variant='h6' fontWeight={300}>
+          Online Friends
+        </Typography>
+        
+      </Box>
     </Box>
   )
 }

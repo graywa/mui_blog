@@ -1,11 +1,27 @@
-import { Box } from '@mui/material'
-import React from 'react'
+import {
+  Box,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+  Switch,
+} from '@mui/material'
+import {
+  Home,
+  Description,
+  Group,
+  Storefront,
+  GroupAdd,
+  Settings,
+  AccountBox,
+  DarkMode,
+} from '@mui/icons-material'
 
 const Sidebar = () => {
   return (
     <Box
       flex={1}
-      bgcolor='lightcoral'
       p={2}
       sx={{
         display: {
@@ -14,7 +30,74 @@ const Sidebar = () => {
         },
       }}
     >
-      Sidebar
+      <Box position='fixed'>
+        <List>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#home'>
+              <ListItemIcon>
+                <Home />
+              </ListItemIcon>
+              <ListItemText primary='Homepage' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#pages'>
+              <ListItemIcon>
+                <Description />
+              </ListItemIcon>
+              <ListItemText primary='Pages' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#groups'>
+              <ListItemIcon>
+                <Group />
+              </ListItemIcon>
+              <ListItemText primary='Groups' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#market'>
+              <ListItemIcon>
+                <Storefront />
+              </ListItemIcon>
+              <ListItemText primary='Marketplace' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#friends'>
+              <ListItemIcon>
+                <GroupAdd />
+              </ListItemIcon>
+              <ListItemText primary='Friends' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#settings'>
+              <ListItemIcon>
+                <Settings />
+              </ListItemIcon>
+              <ListItemText primary='Settings' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#profile'>
+              <ListItemIcon>
+                <AccountBox />
+              </ListItemIcon>
+              <ListItemText primary='Profile' />
+            </ListItemButton>
+          </ListItem>
+          <ListItem disablePadding>
+            <ListItemButton component='a' href='#profile'>
+              <ListItemIcon>
+                <DarkMode />
+              </ListItemIcon>
+              <Switch />
+            </ListItemButton>
+          </ListItem>
+        </List>
+      </Box>
     </Box>
   )
 }
