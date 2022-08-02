@@ -1,24 +1,20 @@
 import { Settings } from '@mui/icons-material'
-import { Button } from '@mui/material'
+import { Box, Button, Stack, styled } from '@mui/material'
+import Feed from './components/Feed'
+import Navbar from './components/Navbar'
+import Rightbar from './components/Rightbar'
+import Sidebar from './components/Sidebar'
 
 function App() {
   return (
-    <>
-      <Button variant='contained' disabled>
-        Hello World
-      </Button>
-      <Button
-        variant='outlined'
-        color='success'
-        size='large'
-        startIcon={<Settings />}
-      >
-        Hello World
-      </Button>
-      <Button variant='text' size='small'>
-        Hello Worldd
-      </Button>
-    </>
+    <Box>
+      <Navbar />
+      <Stack direction='row' spacing={2} justifyContent='space-between'>
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
+    </Box>
   )
 }
 
